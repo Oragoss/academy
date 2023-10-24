@@ -1,14 +1,10 @@
 import Image, { StaticImageData } from "next/image";
 import styles from './SingleCard.module.css';
 import Cover from '@/public/images/cover.png';
+import { DisplayCard } from "@/app/models/DisplayCard";
 
 interface Props {
-    card:{
-            id: number,
-            src: StaticImageData
-            flipped: boolean,
-            disabled: boolean
-         },
+    card: DisplayCard,
     handleChoice: Function
 }
 
@@ -16,6 +12,7 @@ const SingleCard = ({card, handleChoice}: Props) => {
     const handleClick = () => {
         if(!card.disabled)
             handleChoice(card)
+        console.log(`${card.id} was clicked`)
     }
 
   return (
@@ -25,7 +22,7 @@ const SingleCard = ({card, handleChoice}: Props) => {
             <Image 
                 className={styles.back}
                 src={Cover}
-                // onClick={handleClick} 
+                onClick={handleClick} 
                 alt="card back" />
         </div>
     </div>
