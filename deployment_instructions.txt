@@ -1,0 +1,2 @@
+Go to this website and set the environment variables. You'll need a MySQL DB on a server somewhere as well as a cloudinary public ID
+https://vercel.com/new/oragoss-projects/import?s=https%3A%2F%2Fgithub.com%2FOragoss%2Fnext-app-template&hasTrialAvailable=1&showOptionalTeamCreation=false&project-name=next-app-template&framework=nextjs&totalProjects=1&remainingProjects=1
